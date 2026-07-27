@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.egg-info/
+host_key
+.gateway.pid
+gateway.log
+.claude/settings.local.json

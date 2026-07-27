@@ -1,0 +1,77 @@
+Screen {
+    background: $surface;
+    align: center top;
+}
+
+#banner {
+    color: $accent;
+    text-align: center;
+    width: 100%;
+    padding-top: 1;
+}
+
+#subtitle {
+    text-align: center;
+    width: 100%;
+    color: $text-muted;
+    padding-bottom: 1;
+}
+
+#menu-list {
+    width: 44;
+    height: auto;
+    max-height: 16;
+    border: round $accent;
+    margin-top: 1;
+}
+
+.content-wrap {
+    width: 90%;
+    max-width: 100;
+    height: 1fr;
+    padding: 1 2;
+    border: round $panel;
+    border-title-align: center;
+    border-title-color: $accent;
+}
+
+ProjectModal, LineupModal {
+    align: center middle;
+    background: black 55%;
+}
+
+.modal-box {
+    width: 90%;
+    max-width: 100;
+    height: 80%;
+    padding: 1 2;
+    background: $surface;
+    border: round $accent;
+    border-title-align: center;
+    border-title-color: $accent;
+}
+
+.section-title {
+    text-style: bold;
+    color: $accent;
+    padding-top: 1;
+}
+
+.dim {
+    color: $text-muted;
+}
+
+.rm-logo {
+    color: $accent;
+    text-style: bold;
+}
+
+.card {
+    border: round $panel;
+    padding: 0 1;
+    margin-bottom: 1;
+}
+
+DataTable {
+    height: 1fr;
+}
