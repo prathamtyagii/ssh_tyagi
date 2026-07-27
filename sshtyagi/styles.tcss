@@ -61,9 +61,11 @@ ProjectModal, LineupModal {
     color: $text-muted;
 }
 
-.rm-logo {
+.rm-crest {
+    width: 100%;
+    text-align: center;
     color: $accent;
-    text-style: bold;
+    padding-bottom: 1;
 }
 
 .card {

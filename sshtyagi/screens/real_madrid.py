@@ -1,9 +1,11 @@
-import pyfiglet
+from pathlib import Path
+
 from textual import work
 from textual.app import ComposeResult
 from textual.containers import VerticalScroll
 from textual.widgets import Static
 
+from sshtyagi.ascii_art import render_shaded
 from sshtyagi.clients.football import fetch_last_result, fetch_next_fixture
 from sshtyagi.data.real_madrid import (
     FOUNDED,
@@ -19,7 +21,8 @@ from sshtyagi.data.real_madrid import (
 from sshtyagi.screens.base import ContentScreen
 from sshtyagi.screens.lineup_modal import LineupModal
 
-LOGO = pyfiglet.Figlet(font="small").renderText("REAL MADRID")
+CREST_PATH = Path(__file__).parent.parent / "assets" / "real_madrid_crest.png"
+LOGO = render_shaded(CREST_PATH, cols=36)
 
 
 def _fixture_line(fixture: dict | None) -> str:
@@ -48,7 +51,7 @@ class RealMadridScreen(ContentScreen):
         yield from self.compose_header_footer()
         with VerticalScroll(classes="content-wrap") as box:
             box.border_title = "Real Madrid"
-            yield Static(LOGO, classes="rm-logo")
+            yield Static(LOGO, classes="rm-crest")
             yield Static(
                 f"founded {FOUNDED}  --  {STADIUM}  --  {' / '.join(NICKNAMES)}",
                 classes="dim",
